@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Class:CDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Class="www.Class.com" xsi:schemaLocation="www.Class.com ../Metamodels/Class_mta.ecore">
+  <classes name="Account" OwnedProperty="//@properties.0" OwnedOperation="//@operations.0 //@operations.1 //@operations.2"/>
+  <classes name="Transaction" OwnedOperation="//@operations.3"/>
+  <properties name="Balance"/>
+  <operations name="Deposit"/>
+  <operations name="Check"/>
+  <operations name="Withdraw"/>
+  <operations name="Transfer"/>
+</Class:CDiagram>
