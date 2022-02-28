@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UseCase:UcDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UseCase="www.UseCase.com" xsi:schemaLocation="www.UseCase.com ../Metamodels/UseCase_mta.ecore">
+  <relations name="depositing" source="//@actors.0" target="//@usecases.0"/>
+  <relations name="verifying" source="//@actors.0" target="//@usecases.1"/>
+  <relations name="withdrawing" source="//@actors.0" target="//@usecases.2"/>
+  <relations name="transfering" source="//@actors.0" target="//@usecases.3"/>
+  <classifiers name="Account" OwnedUsecase="//@usecases.0 //@usecases.1 //@usecases.2" OwnedProperty="//@properties.0"/>
+  <classifiers name="Transaction" OwnedUsecase="//@usecases.3"/>
+  <properties name="Balance"/>
+  <usecases name="Deposit"/>
+  <usecases name="Check"/>
+  <usecases name="Withdraw"/>
+  <usecases name="Transfer"/>
+  <actors name="Customer"/>
+</UseCase:UcDiagram>
