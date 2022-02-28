@@ -1,0 +1,47 @@
+-- @path MM=/Bank/Metamodels/UseCase_mta.ecore
+-- @path MM1=/Bank/Metamodels/Class_mta.ecore
+
+module MyRules;
+create OUT : MM1 from IN : MM;
+
+-----------------------Rules-------------------------
+rule Uc2C {
+	from
+		UcD : MM!UcDiagram
+	to 
+		CD : MM1!CDiagram (
+			classes <- UcD.classifiers,
+			operations <- UcD.usecases,
+			properties <- UcD.properties
+		)
+}
+
+rule Ct {
+	from
+		U : MM!Classifier
+	to 
+		C : MM1!Class (
+			name <- U.name,
+			OwnedProperty <- U.OwnedProperty,
+			OwnedOperation <- U.OwnedUsecase
+		)
+}
+
+rule Ut {
+	from
+		D : MM!UseCase
+	to 
+		O : MM1!Operation (
+			name <- D.name
+		)
+}
+
+rule Pt {
+	from
+		P : MM!Property
+	to 
+		Pr : MM1!Property (
+			name <- P.name
+		)
+}
+-----------------------End---------------------------
