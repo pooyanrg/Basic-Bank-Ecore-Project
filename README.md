@@ -1,1 +1,1 @@
-# Basic-Virtual-Exan-Ecore-Project
+# Basic-Bank-Ecore-Project
